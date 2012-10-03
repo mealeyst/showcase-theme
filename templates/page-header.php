@@ -1,13 +1,13 @@
-<div class="page-header">
-  <h1>
+<!--<div class="page-header">
+  <h1>-->
     <?php
-      if (is_home()) {
+      /*if (is_home()) {
         if (get_option('page_for_posts', true)) {
           echo get_the_title(get_option('page_for_posts', true));
         } else {
           _e('Latest Posts', 'roots');
         }
-      } elseif (is_archive()) {
+      } else*/if (is_archive()) {
         $term = get_term_by('slug', get_query_var('term'), get_query_var('taxonomy'));
         if ($term) {
           echo $term->name;
@@ -31,8 +31,8 @@
       } elseif (is_404()) {
         _e('File Not Found', 'roots');
       } else {
-        the_title();
+        //the_title();
       }
     ?>
-  </h1>
-</div>
+  <!--</h1>
+</div>-->

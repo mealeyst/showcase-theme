@@ -19,6 +19,7 @@ function roots_scripts() {
   wp_enqueue_style('roots_bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css', false, null);
   wp_enqueue_style('roots_bootstrap_responsive', get_template_directory_uri() . '/assets/css/bootstrap-responsive.css', array('roots_bootstrap'), null);
   wp_enqueue_style('roots_app', get_template_directory_uri() . '/assets/css/app.css', false, null);
+  wp_enqueue_style('showcaseStyle', get_template_directory_uri() . '/assets/css/showcaseStyle.css', false, null);
 
   // Load style.css from child theme
   if (is_child_theme()) {
@@ -39,8 +40,12 @@ function roots_scripts() {
 
   wp_register_script('roots_plugins', get_template_directory_uri() . '/assets/js/plugins.js', false, null, false);
   wp_register_script('roots_main', get_template_directory_uri() . '/assets/js/main.js', false, null, false);
+  wp_register_script('scrollEvents', get_template_directory_uri() . '/assets/js/scrollEvents.js', false, null, false);
+  wp_register_script('showcaseSetup', get_template_directory_uri() . '/assets/js/showcaseSetup.js', false, null, false);
   wp_enqueue_script('roots_plugins');
   wp_enqueue_script('roots_main');
+  wp_enqueue_script('scrollEvents');
+  wp_enqueue_script('showcaseSetup');
 }
 
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);

@@ -6,16 +6,24 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
+     <div class="section-first span12">
+     <div class="brand-holder">
       <a class="brand" href="<?php echo home_url(); ?>/">
-        <?php bloginfo('name'); ?>
+     <?php bloginfo('name'); ?>
       </a>
-      <nav id="nav-main" class="nav-collapse" role="navigation">
-        <?php
-          if (has_nav_menu('primary_navigation')) {
-            wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav'));
-          }
-        ?>
-      </nav>
-    </div>
-  </div>
+      </div><!-- .brand-holder -->
+    </div><!-- .section-first -->
+    <div class="section-second span12">
+      <div class="nav-holder">
+        <nav id="nav-main" class="nav-collapse" role="navigation">
+            <?php
+              if (has_nav_menu('primary_navigation')) {
+                wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav'));
+              }
+            ?>
+        </nav>
+      </div><!-- .nav-holder -->
+    </div><!-- .section-second -->
+  </div><!-- .container -->
+</div><!-- .navbar-inner -->
 </header>

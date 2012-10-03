@@ -9,9 +9,9 @@ add_theme_support('bootstrap-top-navbar');  // Enable Bootstrap's fixed navbar
 
 // Define which pages shouldn't have the sidebar
 function roots_sidebar() {
-  if (is_404() || is_page_template('page-custom.php')) {
+  if (is_404() || is_page_template('page-custom.php') || is_front_page()) {
     return false;
-  } else {
+  }else {
     return true;
   }
 }
