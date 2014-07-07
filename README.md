@@ -1,3 +1,5 @@
+[ ![Codeship Status for mealeyst/showcase-theme](https://www.codeship.io/projects/41622a50-e811-0131-49ed-560aad525726/status)](https://www.codeship.io/projects/25988)
+
 Showcase
 ========
 Introduction
